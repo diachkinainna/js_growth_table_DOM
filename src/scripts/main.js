@@ -5,6 +5,11 @@ const table = document.querySelector('.field');
 
 buttons.addEventListener('click', (e) => {
   const button = e.target.closest('.button');
+
+  if (!button) {
+    return;
+  }
+
   const rows = table.rows;
 
   if (button.classList.contains('append-row')) {
